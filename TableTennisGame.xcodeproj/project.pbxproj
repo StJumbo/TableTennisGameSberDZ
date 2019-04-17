@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13086EA5224D27B200C8852C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13086EA4224D27B200C8852C /* AppDelegate.m */; };
+		13086EA8224D27B200C8852C /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13086EA7224D27B200C8852C /* GameViewController.m */; };
+		13086EAD224D27B400C8852C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13086EAC224D27B400C8852C /* Assets.xcassets */; };
+		13086EB0224D27B400C8852C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13086EAE224D27B400C8852C /* LaunchScreen.storyboard */; };
+		13086EB3224D27B400C8852C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13086EB2224D27B400C8852C /* main.m */; };
+		130FF37122611F65000A03E4 /* SettingsClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF37022611F65000A03E4 /* SettingsClass.m */; };
+		130FF37722613E8C000A03E4 /* GameRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF37622613E8C000A03E4 /* GameRouter.m */; };
+		130FF37B22613FB9000A03E4 /* GamePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF37A22613FB9000A03E4 /* GamePresenter.m */; };
+		130FF37F2261408C000A03E4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF37E2261408C000A03E4 /* SettingsViewController.m */; };
+		130FF382226150C1000A03E4 /* SettingsRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF381226150C1000A03E4 /* SettingsRouter.m */; };
+		130FF38522615144000A03E4 /* SettingsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF38422615144000A03E4 /* SettingsPresenter.m */; };
+		130FF3B7226256D2000A03E4 /* NinetiesThemeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3B6226256D2000A03E4 /* NinetiesThemeFactory.m */; };
+		130FF3BA22625DF9000A03E4 /* ThemeAbstractFactoryClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3B922625DF9000A03E4 /* ThemeAbstractFactoryClass.m */; };
+		130FF3BD22628534000A03E4 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3BC22628534000A03E4 /* SettingsTableViewCell.m */; };
+		130FF3C1226286D5000A03E4 /* SettingsViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3C0226286D5000A03E4 /* SettingsViewFactory.m */; };
+		1374DCD22263C73400932EF9 /* NewYearThemeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1374DCD12263C73400932EF9 /* NewYearThemeFactory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13086EA0224D27B200C8852C /* TableTennisGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTennisGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13086EA3224D27B200C8852C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		13086EA4224D27B200C8852C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		13086EA6224D27B200C8852C /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		13086EA7224D27B200C8852C /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		13086EAC224D27B400C8852C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13086EAF224D27B400C8852C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13086EB1224D27B400C8852C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13086EB2224D27B400C8852C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		130FF36F22611F65000A03E4 /* SettingsClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsClass.h; sourceTree = "<group>"; };
+		130FF37022611F65000A03E4 /* SettingsClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsClass.m; sourceTree = "<group>"; };
+		130FF37522613E8C000A03E4 /* GameRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameRouter.h; sourceTree = "<group>"; };
+		130FF37622613E8C000A03E4 /* GameRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameRouter.m; sourceTree = "<group>"; };
+		130FF37922613FB9000A03E4 /* GamePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePresenter.h; sourceTree = "<group>"; };
+		130FF37A22613FB9000A03E4 /* GamePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GamePresenter.m; sourceTree = "<group>"; };
+		130FF37D2261408C000A03E4 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		130FF37E2261408C000A03E4 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		130FF380226150C1000A03E4 /* SettingsRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsRouter.h; sourceTree = "<group>"; };
+		130FF381226150C1000A03E4 /* SettingsRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsRouter.m; sourceTree = "<group>"; };
+		130FF38322615144000A03E4 /* SettingsPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsPresenter.h; sourceTree = "<group>"; };
+		130FF38422615144000A03E4 /* SettingsPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsPresenter.m; sourceTree = "<group>"; };
+		130FF3B12262554E000A03E4 /* ThemeViewFactoryProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemeViewFactoryProtocol.h; sourceTree = "<group>"; };
+		130FF3B5226256D2000A03E4 /* NinetiesThemeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NinetiesThemeFactory.h; sourceTree = "<group>"; };
+		130FF3B6226256D2000A03E4 /* NinetiesThemeFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NinetiesThemeFactory.m; sourceTree = "<group>"; };
+		130FF3B822625DF9000A03E4 /* ThemeAbstractFactoryClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemeAbstractFactoryClass.h; sourceTree = "<group>"; };
+		130FF3B922625DF9000A03E4 /* ThemeAbstractFactoryClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemeAbstractFactoryClass.m; sourceTree = "<group>"; };
+		130FF3BB22628534000A03E4 /* SettingsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewCell.h; sourceTree = "<group>"; };
+		130FF3BC22628534000A03E4 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
+		130FF3BF226286D5000A03E4 /* SettingsViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewFactory.h; sourceTree = "<group>"; };
+		130FF3C0226286D5000A03E4 /* SettingsViewFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewFactory.m; sourceTree = "<group>"; };
+		1374DCD02263C73400932EF9 /* NewYearThemeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewYearThemeFactory.h; sourceTree = "<group>"; };
+		1374DCD12263C73400932EF9 /* NewYearThemeFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewYearThemeFactory.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13086E9D224D27B200C8852C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13086E97224D27B200C8852C = {
+			isa = PBXGroup;
+			children = (
+				13086EA2224D27B200C8852C /* TableTennisGame */,
+				13086EA1224D27B200C8852C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13086EA1224D27B200C8852C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13086EA0224D27B200C8852C /* TableTennisGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13086EA2224D27B200C8852C /* TableTennisGame */ = {
+			isa = PBXGroup;
+			children = (
+				13086EA3224D27B200C8852C /* AppDelegate.h */,
+				13086EA4224D27B200C8852C /* AppDelegate.m */,
+				136996C422679CB500B90F83 /* Game */,
+				136996CA22679D2600B90F83 /* Settings */,
+				13086EAC224D27B400C8852C /* Assets.xcassets */,
+				13086EAE224D27B400C8852C /* LaunchScreen.storyboard */,
+				13086EB1224D27B400C8852C /* Info.plist */,
+				13086EB2224D27B400C8852C /* main.m */,
+			);
+			path = TableTennisGame;
+			sourceTree = "<group>";
+		};
+		130FF37222613478000A03E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				130FF3732261347F000A03E4 /* Controllers */,
+				130FF3C22262894E000A03E4 /* ThemeFactory */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		130FF3732261347F000A03E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13086EA6224D27B200C8852C /* GameViewController.h */,
+				13086EA7224D27B200C8852C /* GameViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		130FF374226134CB000A03E4 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				130FF36F22611F65000A03E4 /* SettingsClass.h */,
+				130FF37022611F65000A03E4 /* SettingsClass.m */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		130FF37822613E93000A03E4 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				130FF37522613E8C000A03E4 /* GameRouter.h */,
+				130FF37622613E8C000A03E4 /* GameRouter.m */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		130FF37C22613FC0000A03E4 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				130FF37922613FB9000A03E4 /* GamePresenter.h */,
+				130FF37A22613FB9000A03E4 /* GamePresenter.m */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		130FF3C22262894E000A03E4 /* ThemeFactory */ = {
+			isa = PBXGroup;
+			children = (
+				130FF3B822625DF9000A03E4 /* ThemeAbstractFactoryClass.h */,
+				130FF3B922625DF9000A03E4 /* ThemeAbstractFactoryClass.m */,
+				130FF3B12262554E000A03E4 /* ThemeViewFactoryProtocol.h */,
+				1374DCD32263C73A00932EF9 /* NewYearTheme */,
+				130FF3C322628960000A03E4 /* 90-sTheme */,
+			);
+			path = ThemeFactory;
+			sourceTree = "<group>";
+		};
+		130FF3C322628960000A03E4 /* 90-sTheme */ = {
+			isa = PBXGroup;
+			children = (
+				130FF3B5226256D2000A03E4 /* NinetiesThemeFactory.h */,
+				130FF3B6226256D2000A03E4 /* NinetiesThemeFactory.m */,
+			);
+			path = "90-sTheme";
+			sourceTree = "<group>";
+		};
+		136996C422679CB500B90F83 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				130FF37822613E93000A03E4 /* Routers */,
+				130FF37C22613FC0000A03E4 /* Presenters */,
+				130FF37222613478000A03E4 /* Views */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		136996C522679CD300B90F83 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				130FF3BB22628534000A03E4 /* SettingsTableViewCell.h */,
+				130FF3BC22628534000A03E4 /* SettingsTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		136996C622679CDE00B90F83 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				130FF3BF226286D5000A03E4 /* SettingsViewFactory.h */,
+				130FF3C0226286D5000A03E4 /* SettingsViewFactory.m */,
+				136996C522679CD300B90F83 /* Cells */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		136996C722679D0200B90F83 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				130FF38322615144000A03E4 /* SettingsPresenter.h */,
+				130FF38422615144000A03E4 /* SettingsPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		136996C822679D0B00B90F83 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				130FF380226150C1000A03E4 /* SettingsRouter.h */,
+				130FF381226150C1000A03E4 /* SettingsRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		136996C922679D1700B90F83 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				130FF37D2261408C000A03E4 /* SettingsViewController.h */,
+				130FF37E2261408C000A03E4 /* SettingsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		136996CA22679D2600B90F83 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				136996C822679D0B00B90F83 /* Router */,
+				136996C722679D0200B90F83 /* Presenter */,
+				136996CB22679D4700B90F83 /* View */,
+				130FF374226134CB000A03E4 /* Interactors */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		136996CB22679D4700B90F83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				136996C922679D1700B90F83 /* Controller */,
+				136996C622679CDE00B90F83 /* Factory */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1374DCD32263C73A00932EF9 /* NewYearTheme */ = {
+			isa = PBXGroup;
+			children = (
+				1374DCD02263C73400932EF9 /* NewYearThemeFactory.h */,
+				1374DCD12263C73400932EF9 /* NewYearThemeFactory.m */,
+			);
+			path = NewYearTheme;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13086E9F224D27B200C8852C /* TableTennisGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13086EB6224D27B400C8852C /* Build configuration list for PBXNativeTarget "TableTennisGame" */;
+			buildPhases = (
+				13086E9C224D27B200C8852C /* Sources */,
+				13086E9D224D27B200C8852C /* Frameworks */,
+				13086E9E224D27B200C8852C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableTennisGame;
+			productName = TableTennisGame;
+			productReference = 13086EA0224D27B200C8852C /* TableTennisGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13086E98224D27B200C8852C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Сергей Грызин";
+				TargetAttributes = {
+					13086E9F224D27B200C8852C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 13086E9B224D27B200C8852C /* Build configuration list for PBXProject "TableTennisGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13086E97224D27B200C8852C;
+			productRefGroup = 13086EA1224D27B200C8852C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13086E9F224D27B200C8852C /* TableTennisGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13086E9E224D27B200C8852C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13086EB0224D27B400C8852C /* LaunchScreen.storyboard in Resources */,
+				13086EAD224D27B400C8852C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13086E9C224D27B200C8852C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13086EA8224D27B200C8852C /* GameViewController.m in Sources */,
+				130FF37122611F65000A03E4 /* SettingsClass.m in Sources */,
+				130FF3BD22628534000A03E4 /* SettingsTableViewCell.m in Sources */,
+				130FF3C1226286D5000A03E4 /* SettingsViewFactory.m in Sources */,
+				13086EB3224D27B400C8852C /* main.m in Sources */,
+				130FF3B7226256D2000A03E4 /* NinetiesThemeFactory.m in Sources */,
+				1374DCD22263C73400932EF9 /* NewYearThemeFactory.m in Sources */,
+				13086EA5224D27B200C8852C /* AppDelegate.m in Sources */,
+				130FF37B22613FB9000A03E4 /* GamePresenter.m in Sources */,
+				130FF3BA22625DF9000A03E4 /* ThemeAbstractFactoryClass.m in Sources */,
+				130FF38522615144000A03E4 /* SettingsPresenter.m in Sources */,
+				130FF382226150C1000A03E4 /* SettingsRouter.m in Sources */,
+				130FF37722613E8C000A03E4 /* GameRouter.m in Sources */,
+				130FF37F2261408C000A03E4 /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		13086EAE224D27B400C8852C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13086EAF224D27B400C8852C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13086EB4224D27B400C8852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		13086EB5224D27B400C8852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13086EB7224D27B400C8852C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TM54XW2DUL;
+				INFOPLIST_FILE = TableTennisGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.GryzinSA.TableTennisGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13086EB8224D27B400C8852C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TM54XW2DUL;
+				INFOPLIST_FILE = TableTennisGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.GryzinSA.TableTennisGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13086E9B224D27B200C8852C /* Build configuration list for PBXProject "TableTennisGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13086EB4224D27B400C8852C /* Debug */,
+				13086EB5224D27B400C8852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13086EB6224D27B400C8852C /* Build configuration list for PBXNativeTarget "TableTennisGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13086EB7224D27B400C8852C /* Debug */,
+				13086EB8224D27B400C8852C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13086E98224D27B200C8852C /* Project object */;
+}
