@@ -18,11 +18,11 @@
 @property (nonatomic, strong) UILabel *scoreLabel;
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) UIButton *pauseButton;
-@property (nonatomic) CGFloat dx;
-@property (nonatomic) CGFloat dy;
 @property (nonatomic) int userGoals;
 @property (nonatomic) int computerGoals;
 @property (nonatomic) int seconds;
+@property (nonatomic) CGFloat dx;
+@property (nonatomic) CGFloat dy;
 @property (nonatomic) CGFloat computerRacketdx;
 @property (nonatomic) ThemeAbstractFactoryClass *factory;
 @property (nonatomic, strong) SettingsClass *settings;
@@ -38,6 +38,8 @@
     self.presenter = [GamePresenter new];
     self.presenter.routerDelegate = [GameRouter new];
     self.presenter.routerDelegate.navVC = self.navigationController;
+    self.presenter.collisionDetectorDelegate = [CollisionDetectorClass new];
+    
     
     self.factory = [ThemeAbstractFactoryClass new];
     
@@ -79,6 +81,12 @@
     
     [self addGestureRecognizerToUserRacket];
     
+    [self.presenter.collisionDetectorDelegate setBallFrame:self.ball.frame];
+    [self.presenter.collisionDetectorDelegate setUserRacketFrame:self.userRacket.frame];
+    [self.presenter.collisionDetectorDelegate setComputerRacketFrame:self.computerRacket.frame];
+    CGRect tableFrame = CGRectMake(self.view.bounds.origin.x, self.view.bounds.origin.y + self.scoreLabel.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height - self.scoreLabel.frame.size.height);
+    [self.presenter.collisionDetectorDelegate setViewFrame:tableFrame];
+    
     self.dx = self.settings.speed;
     self.dy = self.settings.speed;
     self.computerRacketdx = self.settings.speed * self.settings.difficulty;
@@ -101,12 +109,28 @@
 
 - (void)moveBall
 {
-    [self detectCollisionWithWalls];
-    [self detectCollissionWithUserRacket];
-    [self detectCollissionWithComputerRacket];
-    [self detectGoal];
+    if ([self.presenter.collisionDetectorDelegate detectedCollisionWithWalls])
+    {
+        self.dx *= -1;
+    }
+    if ([self.presenter.collisionDetectorDelegate detectCollissionWithUserRacket] ||
+        [self.presenter.collisionDetectorDelegate detectCollissionWithComputerRacket])
+    {
+        self.dy *= -1;
+    }
+    if([self.presenter.collisionDetectorDelegate detectedUserGoal])
+    {
+        self.userGoals += 1;
+        [self restartAfterGoal];
+    }
+    if([self.presenter.collisionDetectorDelegate detectedComputerGoal])
+    {
+        self.computerGoals += 1;
+        [self restartAfterGoal];
+    }
     [self moveComputerRacket];
     self.ball.center = CGPointMake(self.ball.center.x + self.dx, self.ball.center.y + self.dy);
+    [self.presenter.collisionDetectorDelegate setBallFrame:self.ball.frame];
 }
 
 - (void)moveComputerRacket
@@ -120,6 +144,7 @@
     {
         [self.computerRacket setCenter:CGPointMake(self.computerRacket.center.x - self.computerRacketdx, self.computerRacket.center.y)];
     }
+    [self.presenter.collisionDetectorDelegate setComputerRacketFrame:self.computerRacket.frame];
 }
 
 - (void)moveUserRacket
@@ -130,61 +155,26 @@
         CGPoint point = CGPointMake(touchPosition.x, self.userRacket.center.y);
         [self.userRacket setCenter:point];
     }
+    [self.presenter.collisionDetectorDelegate setUserRacketFrame:self.userRacket.frame];
 }
-
-
-//MARK: - Detecting collisions
-
-- (void)detectCollisionWithWalls
-{
-    if (((self.ball.frame.origin.x + self.ball.frame.size.width) > self.view.frame.size.width) || (self.ball.frame.origin.x < 0))
-    {
-        self.dx *= -1;
-    }
-}
-
-- (void)detectGoal
-{
-    if ((self.ball.frame.origin.y + self.ball.frame.size.height) > self.view.frame.size.height)
-    {
-        self.computerGoals += 1;
-        [self restartAfterGoal];
-    }
-        
-    if (self.ball.frame.origin.y < self.view.frame.origin.y + self.scoreLabel.frame.size.height)
-    {
-        self.userGoals += 1;
-        [self restartAfterGoal];
-    }
-}
-
-- (void)restartAfterGoal
+         
+ - (void)restartAfterGoal
 {
     self.dy *= -1;
     [self.ball setCenter:self.view.center];
+    [self.presenter.collisionDetectorDelegate setBallFrame:self.ball.frame];
+    
     self.scoreLabel.text = [NSString stringWithFormat:@"USER 0%i:0%i COMP", self.userGoals, self.computerGoals];
     //сделать паузу в 2 секунды
     [self.timer invalidate];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(moveBall) userInfo:nil repeats:YES];
     [self.timer setFireDate:[NSDate dateWithTimeIntervalSinceNow:2.0]];
+    
     [self.userRacket setCenter:CGPointMake(self.view.center.x, self.userRacket.center.y)];
+    [self.presenter.collisionDetectorDelegate setUserRacketFrame:self.userRacket.frame];
+    
     [self.computerRacket setCenter:CGPointMake(self.view.center.x, self.computerRacket.center.y)];
-}
-
-- (void)detectCollissionWithUserRacket
-{
-    if ((self.ball.frame.origin.y + self.ball.frame.size.height > self.userRacket.frame.origin.y) && (self.ball.center.x < self.userRacket.frame.origin.x + self.userRacket.frame.size.width) && (self.ball.center.x > self.userRacket.frame.origin.x))
-    {
-        self.dy *= -1;
-    }
-}
-
-- (void)detectCollissionWithComputerRacket
-{
-    if ((self.ball.frame.origin.y < self.computerRacket.frame.origin.y + self.computerRacket.frame.size.height) && (self.ball.center.x < self.computerRacket.frame.origin.x + self.computerRacket.frame.size.width) && (self.ball.center.x > self.computerRacket.frame.origin.x))
-    {
-        self.dy *= -1;
-    }
+    [self.presenter.collisionDetectorDelegate setComputerRacketFrame:self.computerRacket.frame];
 }
 
 

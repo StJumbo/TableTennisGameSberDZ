@@ -22,6 +22,7 @@
 		130FF3BA22625DF9000A03E4 /* ThemeAbstractFactoryClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3B922625DF9000A03E4 /* ThemeAbstractFactoryClass.m */; };
 		130FF3BD22628534000A03E4 /* SettingsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3BC22628534000A03E4 /* SettingsTableViewCell.m */; };
 		130FF3C1226286D5000A03E4 /* SettingsViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 130FF3C0226286D5000A03E4 /* SettingsViewFactory.m */; };
+		136996D222687D1B00B90F83 /* CollisionDetectorClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 136996D122687D1B00B90F83 /* CollisionDetectorClass.m */; };
 		1374DCD22263C73400932EF9 /* NewYearThemeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1374DCD12263C73400932EF9 /* NewYearThemeFactory.m */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,8 @@
 		130FF3BC22628534000A03E4 /* SettingsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewCell.m; sourceTree = "<group>"; };
 		130FF3BF226286D5000A03E4 /* SettingsViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewFactory.h; sourceTree = "<group>"; };
 		130FF3C0226286D5000A03E4 /* SettingsViewFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewFactory.m; sourceTree = "<group>"; };
+		136996D022687D1B00B90F83 /* CollisionDetectorClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionDetectorClass.h; sourceTree = "<group>"; };
+		136996D122687D1B00B90F83 /* CollisionDetectorClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollisionDetectorClass.m; sourceTree = "<group>"; };
 		1374DCD02263C73400932EF9 /* NewYearThemeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewYearThemeFactory.h; sourceTree = "<group>"; };
 		1374DCD12263C73400932EF9 /* NewYearThemeFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewYearThemeFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +176,7 @@
 			children = (
 				130FF37822613E93000A03E4 /* Routers */,
 				130FF37C22613FC0000A03E4 /* Presenters */,
+				136996CF22687CC700B90F83 /* Interactor */,
 				130FF37222613478000A03E4 /* Views */,
 			);
 			path = Game;
@@ -242,6 +246,15 @@
 				136996C622679CDE00B90F83 /* Factory */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		136996CF22687CC700B90F83 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				136996D022687D1B00B90F83 /* CollisionDetectorClass.h */,
+				136996D122687D1B00B90F83 /* CollisionDetectorClass.m */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		1374DCD32263C73A00932EF9 /* NewYearTheme */ = {
@@ -333,6 +346,7 @@
 				130FF37B22613FB9000A03E4 /* GamePresenter.m in Sources */,
 				130FF3BA22625DF9000A03E4 /* ThemeAbstractFactoryClass.m in Sources */,
 				130FF38522615144000A03E4 /* SettingsPresenter.m in Sources */,
+				136996D222687D1B00B90F83 /* CollisionDetectorClass.m in Sources */,
 				130FF382226150C1000A03E4 /* SettingsRouter.m in Sources */,
 				130FF37722613E8C000A03E4 /* GameRouter.m in Sources */,
 				130FF37F2261408C000A03E4 /* SettingsViewController.m in Sources */,

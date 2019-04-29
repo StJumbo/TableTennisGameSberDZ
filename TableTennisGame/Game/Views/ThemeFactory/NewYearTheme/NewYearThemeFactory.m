@@ -78,6 +78,7 @@
     UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.timeLabelWidth, self.scoreboardHeight)];
     [timeLabel setFont:[self getThemeFont]];
     timeLabel.text = @"00:00";
+    [timeLabel setTextAlignment:NSTextAlignmentCenter];
     [timeLabel setTextColor:UIColor.whiteColor];
     
     return timeLabel;

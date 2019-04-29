@@ -8,6 +8,7 @@
 
 #import "GamePresenter.h"
 #import "GameRouter.h"
+#import "CollisionDetectorClass.h"
 
 @implementation GamePresenter
 

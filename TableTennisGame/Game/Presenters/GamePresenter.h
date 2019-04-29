@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 @class GameRouter;
+@class CollisionDetectorClass;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GamePresenter : NSObject
 
 @property (nonatomic, strong)GameRouter *routerDelegate;
+@property (nonatomic, strong)CollisionDetectorClass *collisionDetectorDelegate;
 
 @end
 

@@ -11,6 +11,7 @@
 #import "ThemeAbstractFactoryClass.h"
 #import "SettingsClass.h"
 #import "GamePresenter.h"
+#import "CollisionDetectorClass.h"
 
 @interface GameViewController : UIViewController
 
